@@ -1,247 +1,228 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("F:/eclipse/BDDPractice/src/main/java/feature/Login.Feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("F:/eclipse/BDDPractice/src/main/java/feature/AmazonSearch.Feature");
 formatter.feature({
-  "line": 3,
-  "name": "Free CRM login feature",
+  "line": 2,
+  "name": "Check search functionality of amazon",
   "description": "",
-  "id": "free-crm-login-feature",
+  "id": "check-search-functionality-of-amazon",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "line": 7,
-  "name": "Free CRM login test scenario",
+  "line": 4,
+  "name": "Test scenario for amazon search bar",
   "description": "",
-  "id": "free-crm-login-feature;free-crm-login-test-scenario",
+  "id": "check-search-functionality-of-amazon;test-scenario-for-amazon-search-bar",
   "type": "scenario_outline",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 8,
-  "name": "User is already on login page",
+  "line": 5,
+  "name": "user is already on amazon page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 9,
-  "name": "title of login page is CRMPRO  - CRM software for customer relationship management, sales, and support.",
-  "keyword": "When "
+  "line": 6,
+  "name": "enter \"\u003ctestData\u003e\" on searchbar and click on serach button",
+  "keyword": "Then "
 });
 formatter.step({
-  "line": 10,
-  "name": "User enters \"\u003cusername\u003e\" and \"\u003cpassword\u003e\"",
+  "line": 7,
+  "name": "close the browser",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 12,
+  "line": 9,
   "name": "",
   "description": "",
-  "id": "free-crm-login-feature;free-crm-login-test-scenario;",
+  "id": "check-search-functionality-of-amazon;test-scenario-for-amazon-search-bar;",
   "rows": [
     {
       "cells": [
-        "username",
-        "password"
+        "testData"
+      ],
+      "line": 10,
+      "id": "check-search-functionality-of-amazon;test-scenario-for-amazon-search-bar;;1"
+    },
+    {
+      "cells": [
+        "watches"
+      ],
+      "line": 11,
+      "id": "check-search-functionality-of-amazon;test-scenario-for-amazon-search-bar;;2"
+    },
+    {
+      "cells": [
+        "selenium"
+      ],
+      "line": 12,
+      "id": "check-search-functionality-of-amazon;test-scenario-for-amazon-search-bar;;3"
+    },
+    {
+      "cells": [
+        "batman"
       ],
       "line": 13,
-      "id": "free-crm-login-feature;free-crm-login-test-scenario;;1"
-    },
-    {
-      "cells": [
-        "tejas",
-        "duo"
-      ],
-      "line": 14,
-      "id": "free-crm-login-feature;free-crm-login-test-scenario;;2"
-    },
-    {
-      "cells": [
-        "ttoley",
-        "duo"
-      ],
-      "line": 15,
-      "id": "free-crm-login-feature;free-crm-login-test-scenario;;3"
-    },
-    {
-      "cells": [
-        "tejast",
-        "duo"
-      ],
-      "line": 16,
-      "id": "free-crm-login-feature;free-crm-login-test-scenario;;4"
+      "id": "check-search-functionality-of-amazon;test-scenario-for-amazon-search-bar;;4"
     }
   ],
   "keyword": "Examples"
 });
 formatter.scenario({
-  "line": 14,
-  "name": "Free CRM login test scenario",
+  "line": 11,
+  "name": "Test scenario for amazon search bar",
   "description": "",
-  "id": "free-crm-login-feature;free-crm-login-test-scenario;;2",
+  "id": "check-search-functionality-of-amazon;test-scenario-for-amazon-search-bar;;2",
   "type": "scenario",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 8,
-  "name": "User is already on login page",
+  "line": 5,
+  "name": "user is already on amazon page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 9,
-  "name": "title of login page is CRMPRO  - CRM software for customer relationship management, sales, and support.",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 10,
-  "name": "User enters \"tejas\" and \"duo\"",
+  "line": 6,
+  "name": "enter \"watches\" on searchbar and click on serach button",
   "matchedColumns": [
-    0,
-    1
+    0
   ],
   "keyword": "Then "
 });
-formatter.match({
-  "location": "LoginStepDefinition.user_is_already_on_login_page()"
-});
-formatter.result({
-  "duration": 13516265300,
-  "status": "passed"
+formatter.step({
+  "line": 7,
+  "name": "close the browser",
+  "keyword": "Then "
 });
 formatter.match({
-  "location": "LoginStepDefinition.title_of_login_page_is_CRMPRO_CRM_software_for_customer_relationship_management_sales_and_support()"
+  "location": "SearchBarStepDefinition.user_is_already_on_amazon_page()"
 });
 formatter.result({
-  "duration": 27574800,
+  "duration": 14410922000,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "tejas",
-      "offset": 13
-    },
-    {
-      "val": "duo",
-      "offset": 25
+      "val": "watches",
+      "offset": 7
     }
   ],
-  "location": "LoginStepDefinition.user_enters_username_and_password(String,String)"
+  "location": "SearchBarStepDefinition.enter_on_searchbar_and_click_on_serach_button(String)"
 });
 formatter.result({
-  "duration": 370526900,
+  "duration": 5903499200,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SearchBarStepDefinition.close_the_browser()"
+});
+formatter.result({
+  "duration": 245302500,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 15,
-  "name": "Free CRM login test scenario",
+  "line": 12,
+  "name": "Test scenario for amazon search bar",
   "description": "",
-  "id": "free-crm-login-feature;free-crm-login-test-scenario;;3",
+  "id": "check-search-functionality-of-amazon;test-scenario-for-amazon-search-bar;;3",
   "type": "scenario",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 8,
-  "name": "User is already on login page",
+  "line": 5,
+  "name": "user is already on amazon page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 9,
-  "name": "title of login page is CRMPRO  - CRM software for customer relationship management, sales, and support.",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 10,
-  "name": "User enters \"ttoley\" and \"duo\"",
+  "line": 6,
+  "name": "enter \"selenium\" on searchbar and click on serach button",
   "matchedColumns": [
-    0,
-    1
+    0
   ],
   "keyword": "Then "
 });
-formatter.match({
-  "location": "LoginStepDefinition.user_is_already_on_login_page()"
-});
-formatter.result({
-  "duration": 9911827600,
-  "status": "passed"
+formatter.step({
+  "line": 7,
+  "name": "close the browser",
+  "keyword": "Then "
 });
 formatter.match({
-  "location": "LoginStepDefinition.title_of_login_page_is_CRMPRO_CRM_software_for_customer_relationship_management_sales_and_support()"
+  "location": "SearchBarStepDefinition.user_is_already_on_amazon_page()"
 });
 formatter.result({
-  "duration": 38728500,
+  "duration": 9792594500,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "ttoley",
-      "offset": 13
-    },
-    {
-      "val": "duo",
-      "offset": 26
+      "val": "selenium",
+      "offset": 7
     }
   ],
-  "location": "LoginStepDefinition.user_enters_username_and_password(String,String)"
+  "location": "SearchBarStepDefinition.enter_on_searchbar_and_click_on_serach_button(String)"
 });
 formatter.result({
-  "duration": 350944100,
+  "duration": 5713370900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SearchBarStepDefinition.close_the_browser()"
+});
+formatter.result({
+  "duration": 228842100,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 16,
-  "name": "Free CRM login test scenario",
+  "line": 13,
+  "name": "Test scenario for amazon search bar",
   "description": "",
-  "id": "free-crm-login-feature;free-crm-login-test-scenario;;4",
+  "id": "check-search-functionality-of-amazon;test-scenario-for-amazon-search-bar;;4",
   "type": "scenario",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 8,
-  "name": "User is already on login page",
+  "line": 5,
+  "name": "user is already on amazon page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 9,
-  "name": "title of login page is CRMPRO  - CRM software for customer relationship management, sales, and support.",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 10,
-  "name": "User enters \"tejast\" and \"duo\"",
+  "line": 6,
+  "name": "enter \"batman\" on searchbar and click on serach button",
   "matchedColumns": [
-    0,
-    1
+    0
   ],
   "keyword": "Then "
 });
-formatter.match({
-  "location": "LoginStepDefinition.user_is_already_on_login_page()"
-});
-formatter.result({
-  "duration": 11707595000,
-  "status": "passed"
+formatter.step({
+  "line": 7,
+  "name": "close the browser",
+  "keyword": "Then "
 });
 formatter.match({
-  "location": "LoginStepDefinition.title_of_login_page_is_CRMPRO_CRM_software_for_customer_relationship_management_sales_and_support()"
+  "location": "SearchBarStepDefinition.user_is_already_on_amazon_page()"
 });
 formatter.result({
-  "duration": 17873900,
+  "duration": 11493267900,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "tejast",
-      "offset": 13
-    },
-    {
-      "val": "duo",
-      "offset": 26
+      "val": "batman",
+      "offset": 7
     }
   ],
-  "location": "LoginStepDefinition.user_enters_username_and_password(String,String)"
+  "location": "SearchBarStepDefinition.enter_on_searchbar_and_click_on_serach_button(String)"
 });
 formatter.result({
-  "duration": 379870600,
+  "duration": 5654441100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SearchBarStepDefinition.close_the_browser()"
+});
+formatter.result({
+  "duration": 219626200,
   "status": "passed"
 });
 });
