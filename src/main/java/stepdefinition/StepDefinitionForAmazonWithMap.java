@@ -1,6 +1,6 @@
 package stepdefinition;
 
-import java.awt.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -8,12 +8,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class SearchBarStepDefinition {
-	WebDriver driver;
+public class StepDefinitionForAmazonWithMap {
+WebDriver driver;
 	
 	@Given("^user is already on amazon page$")
 	public void user_is_already_on_amazon_page() throws Throwable {
@@ -41,21 +40,21 @@ public class SearchBarStepDefinition {
 	    // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
 	    // E,K,V must be a scalar (String, Integer, Date, enum etc)
 		
-		java.util.List<java.util.List<String>> list = dataTable.raw();
+		Map<String, String> list = dataTable.asMap(String.class, String.class);
 		
 		driver.findElement(By.xpath("//input[@type='text']")).click();
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(list.get(0).get(0));
+		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(list.get("searchbar"));
 		driver.findElement(By.xpath("//input[@id='nav-search-submit-button']")).click();
 		
 		
 		driver.findElement(By.xpath("//input[@type='text']")).click();
 		driver.findElement(By.xpath("//input[@type='text']")).clear();
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(list.get(0).get(1));
+		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(list.get("searchbar"));
 		driver.findElement(By.xpath("//input[@id='nav-search-submit-button']")).click();
 		
 		driver.findElement(By.xpath("//input[@type='text']")).click();
 		driver.findElement(By.xpath("//input[@type='text']")).clear();
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(list.get(0).get(2));
+		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(list.get("searchbar"));
 		driver.findElement(By.xpath("//input[@id='nav-search-submit-button']")).click();
 		
 		
@@ -68,5 +67,6 @@ public class SearchBarStepDefinition {
 		driver.close();
 	    
 	}
+
 
 }

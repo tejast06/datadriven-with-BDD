@@ -1,4 +1,3 @@
-
 Feature: Check search functionality of amazon
     
     Scenario: Test scenario for amazon search bar
@@ -10,5 +9,3 @@ Feature: Check search functionality of amazon
     |watches|selenium|batman goodies|
    
     Then close the browser
-    
-    

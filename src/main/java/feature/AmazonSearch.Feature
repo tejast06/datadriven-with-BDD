@@ -1,13 +1,14 @@
 
 Feature: Check search functionality of amazon
     
-    Scenario Outline: Test scenario for amazon search bar
+    Scenario: Test scenario for amazon search bar
+    
     Given user is already on amazon page
-    Then enter "<testData>" on searchbar and click on serach button
+    
+    Then enter data on searchbar and click on search button
+    
+    |watches|selenium|batman goodies|
+   
     Then close the browser
     
-    Examples:
-    |testData|
-    |watches|
-    |selenium|
-    |batman|
+    
